@@ -4,6 +4,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:graduatio_project/cubit/theme_cubit.dart';
 import 'package:graduatio_project/utils/settings_screen.dart';
 
+import 'navigation/sidebar.dart';
+
 void main() {
   runApp(
     BlocProvider(create: (context) => ThemeCubit(),
@@ -16,9 +18,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ThemeCubit, ThemeData>(builder: (context, theme) {
       return MaterialApp(
+        color: Theme.of(context).colorScheme.surface,
         debugShowCheckedModeBanner: false,
         theme: theme,
-        home: SettingsScreen(),
+        home: SideBar(),
       );
     });
 
