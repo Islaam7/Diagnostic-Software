@@ -9,14 +9,14 @@ class SettingsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(
-              onPressed: () {
-                context.read<ThemeCubit>().toggleTheme();
-              },
-              icon: Icon(
-                  context.read<ThemeCubit>().state == ThemeCubit.lightTheme
-                      ? Icons.dark_mode
-                      : Icons.light_mode))
+          // IconButton(
+          //     onPressed: () {
+                // context.read<ThemeCubit>().toggleTheme();
+              // },
+              // icon: Icon(
+                  // context.read<ThemeCubit>().state == ThemeCubit.lightTheme
+                  //     ? Icons.dark_mode
+                  //     : Icons.light_mode))
         ],
       ),
     );
